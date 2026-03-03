@@ -21,7 +21,7 @@ const AuthForm = () => {
     }
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/register",
+        `${import.meta.env.VITE_API_URL}/auth/register`,
         {
           name,
           email,
@@ -44,7 +44,7 @@ const AuthForm = () => {
     }
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/login",
+        `${import.meta.env.VITE_API_URL}/auth/login`,
         {
           email,
           password: passwordRef.current.value,

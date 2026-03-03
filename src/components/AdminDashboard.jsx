@@ -17,7 +17,7 @@ const AdminDashboard = () => {
     const token = sessionStorage.getItem("token");
 
     const { data } = await axios.get(
-      "http://localhost:3000/shipments",
+      `${import.meta.env.VITE_API_URL}/shipments`,
       {
         headers: { Authorization: `Bearer ${token}` }
       }
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
     const token = sessionStorage.getItem("token");
 
     await axios.post(
-      "http://localhost:3000/prices",
+      `${import.meta.env.VITE_API_URL}/prices`,
       { vegetable, minPrice, maxPrice, date },
       { headers: { Authorization: `Bearer ${token}` } }
     );

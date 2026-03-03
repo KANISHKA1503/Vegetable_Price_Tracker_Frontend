@@ -19,7 +19,7 @@ const Notify = () => {
       }
 
       const { data } = await axios.post(
-        "http://localhost:3000/shipments/notify",
+        `${import.meta.env.VITE_API_URL}/shipments/notify`,
         {
           vegetable,
           quantity,
