@@ -11,7 +11,7 @@ const VegetablePrices = () => {
   const fetchPrices = async () => {
    // const token = sessionStorage.getItem("token");
 
-    const { data } = await axios.get("http://localhost:3000/prices");
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/prices`);
     // , {
     //   headers: {
     //     Authorization: `Bearer ${token}`
